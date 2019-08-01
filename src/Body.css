@@ -13,13 +13,15 @@ main {
     overflow-y: scroll;
 }
 
+main {
+    overflow-x: scroll;
+}
 
 div.panel {
-    min-width: 50%;
+    min-width: 400px;
     width: 100%;
     border: 1px solid purple;
     height: calc(100vh - 48px);
-    overflow-y: hidden;
 }
 
 div.panel.bothPanels {
