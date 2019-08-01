@@ -17,7 +17,6 @@ const Panel = ({title, childLength=10, openedPanel, panelTitleSize}) => {
     const [titleHeight,setTitleHeight] = useState(48);
 
     useEffect(() => {
-        window.document.title = titleRef.current.offsetHeight;
         setTitleHeight(titleRef.current.offsetHeight);
     }, [titleRef, panelTitleSize])
 
