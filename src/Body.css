@@ -4,12 +4,25 @@ main {
 }
 
 .panel-title {
-    height: 48px;
     background-color: orangered;
     border: 1px solid black;
 }
+
+.panel-title.small {
+    height: 24px;
+}
+
+.panel-title.medium {
+    height: 48px;
+}
+
+.panel-title.large {
+    height: 60px;
+}
+
+
+
 .panel-content {
-    height: calc(100% - 48px);
     overflow-y: scroll;
 }
 
