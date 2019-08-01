@@ -2,16 +2,17 @@ import React from 'react';
 import './Body.css';
 
 
-export const Body = () => {
+export const Body = ({openedPanel}) => {
     return <main>
-        <Panel title={"Panel 1"} childLength={20}/>
-        <Panel title={"Panel 2"}/>
+        {(openedPanel === "bothPanels" || openedPanel === "panel1") && <Panel title={"Panel 1"} childLength={20}/>}
+        {(openedPanel === "bothPanels" || openedPanel === "panel2")  && <Panel title={"Panel 2"}/>}
+
     </main>
 }
 
 
-const Panel = ({title, childLength=10}) => {
-    return <div className={"panel"}>
+const Panel = ({title, childLength=10, openedPanel}) => {
+    return <div className={"panel " + {openedPanel}}>
         <h1 className={"panel-title"}>{title}</h1>
         <div className={"panel-content"}>
             <FakeContentGenerator size={childLength} />

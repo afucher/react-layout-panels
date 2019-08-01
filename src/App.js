@@ -4,13 +4,16 @@ import './App.css';
 import Body from './Body'
 
 function App() {
-  
+  const [openedPanel, setOpenedPanel] = useState("bothPanels");
 
   return (
     <div className="App">
       <header className="App-header">
+        <button onClick={() => setOpenedPanel("bothPanels")}>BothPanels</button>
+        <button onClick={() => setOpenedPanel("panel1")}>Panel1</button>
+        <button onClick={() => setOpenedPanel("panel2")}>Panel2</button>
       </header>
-      <Body />
+      <Body openedPanel={openedPanel}/>
     </div>
   );
 }
